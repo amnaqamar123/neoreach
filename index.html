@@ -1,0 +1,4149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>neoreach</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            width: 100%;
+            height: auto;
+
+        }
+
+        .nav-bar {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+        }
+
+        .div {
+            height: auto;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div1 {
+            height: auto;
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .div2 {
+            height: auto;
+            width: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .logo {
+            height: 25px;
+            width: 100%;
+        }
+
+        .list a {
+            font-size: 15px;
+            font-weight: 400;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        .list {
+            list-style-type: none;
+            transition: all 0.5s linear;
+        }
+
+        .button {
+            height: 48px;
+            width: 55%;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: -20px;
+            font-family: proxima-nova, sans-serif;
+            background-color: rgb(0, 200, 175);
+            color: white;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            border: none;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .button:hover,
+        .button1:hover,
+        .button2:hover,
+        .button3:hover,
+        .button4:hover,
+        .button-1:hover,
+        .button-2:hover,
+        .button-3:hover,.bg-3div5:hover{
+            background-color: black;
+            color: rgb(0, 200, 175);
+        }
+        .list-1:hover,.list-2:hover {
+            color: rgb(0, 200, 175);
+        }
+
+        #img {
+            height: 20px;
+            width: 100%;
+            opacity: 0;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #img:hover {
+            opacity: 1;
+            transform: translateX(3%);
+        }
+
+        .background {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: end;
+        }
+
+        .div3 {
+            height: 400px;
+            width: 40%;
+        }
+
+        .div-4 {
+            height: auto;
+            width: 60%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .img-div {
+            height: auto;
+            width: 30%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+
+        .div4 {
+            height: auto;
+            width: 90%;
+            margin: auto;
+        }
+
+        .div5 {
+            height: auto;
+            width: 90%;
+            margin: auto;
+        }
+
+        .div6 {
+            height: auto;
+            width: 90%;
+            margin: auto;
+        }
+
+        .div4>h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 54px;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .div5>p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .button1 {
+            height: 62px;
+            width: 40%;
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 20px;
+            font-family: proxima-nova, sans-serif;
+            background-color: rgb(0, 200, 175);
+            color: white;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            border: none;
+            transition: all 0.5s linear;
+            margin-left: 5%;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            height: auto;
+            width: 70%;
+            margin-left: 10%;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: row;
+            z-index: 1;
+        }
+
+        .boxes {
+            height: auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .boxes1 {
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .div-1 {
+            height: auto;
+            width: 10%;
+        }
+
+        .div-2>h1,
+        .div-3>h1 {
+            font-size: 15px;
+            font-weight: 700;
+            color: black;
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .div-2>p,
+        .div-3>p {
+            font-size: 14px;
+            font-weight: 400;
+            color: black;
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .div-2 {
+            height: 70px;
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+        }
+
+        .div-3 {
+            height: 80px;
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+        }
+
+        .dropdown:hover,
+        .dropdown1:hover {
+            opacity: 1;
+            visibility: visible;
+
+        }
+
+        .list:hover~.dropdown,
+        .list:hover~.dropdown1 {
+            opacity: 1;
+            visibility: visible;
+
+        }
+
+        .div-1>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .dropdown1 {
+            height: 70px;
+            width: 20%;
+            margin-left: 70%;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+        .dropdown1>h1,
+        .dropdown1>h2 {
+            font-size: 15px;
+            font-weight: 400;
+            color: black;
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .image {
+            height: 100%;
+            width: 100%;
+        }
+
+        .img-div1 {
+            height: auto;
+            width: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .img-div2 {
+            height: auto;
+            width: 40%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .img-div3 {
+            height: auto;
+            width: 50%;
+            position: absolute;
+            margin-top: -300px;
+            margin-left: 70%;
+        }
+
+        .image3 {
+            height: 100%;
+            width: 100%;
+            transition: 0.5s linear;
+            animation: animate 3s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .img-div4 {
+            height: auto;
+            width: 50%;
+            position: absolute;
+            bottom: 40px;
+            margin-left: -40%;
+        }
+
+        .image4 {
+            height: 100%;
+            width: 100%;
+            transition: 0.5s linear;
+            animation: anim 3s linear infinite;
+        }
+
+        @keyframes anim {
+            0% {
+                transform: translateY(10px);
+            }
+
+            50% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        .img-div6 {
+            height: auto;
+            width: 17%;
+            position: absolute;
+            margin-left: 30%;
+            bottom: 50px;
+
+
+
+
+        }
+
+        .img-div7 {
+            height: auto;
+            width: 58%;
+            position: absolute;
+            margin-top: 150px;
+            overflow: hidden;
+        }
+
+        .image2 {
+            height: 100%;
+            width: 150%;
+            transition: 0.5s linear;
+            animation: anime 10s linear infinite;
+        }
+
+        @keyframes anime {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(-300px);
+            }
+        }
+
+        .parent-slider {
+            height: 150px;
+            width: 150%;
+            position: absolute;
+            margin-left: 50%;
+            margin-top: 120px;
+            display: flex;
+            justify-content: center;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .relative-parent {
+            height: auto;
+            width: 80%;
+            position: relative;
+        }
+
+        .slides {
+            height: 130px;
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: slide 3s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .slide1 {
+            animation-delay: 1s;
+        }
+
+        .slide2 {
+            animation-delay: 2.5s;
+        }
+
+        .slide3 {
+            animation-delay: 4s;
+        }
+
+        .slide4 {
+            animation-delay: 5.5s;
+        }
+
+        .slide5 {
+            animation-delay: 7s;
+        }
+
+        .slide6 {
+            animation-delay: 8.5s;
+        }
+
+        .box {
+            height: auto;
+            width: 75%;
+            position: absolute;
+            margin-top: -20px;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .boxes2,
+        .boxes3 {
+            height: auto;
+            width: 50%;
+        }
+
+        .boxes3 {
+            transition: 0.5s linear;
+            animation: dots 3s linear infinite;
+        }
+
+        @keyframes dots {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(20px);
+            }
+        }
+
+        .box1 {
+            height: 60px;
+            width: 20%;
+            position: absolute;
+            margin-left: 40%;
+            margin-top: -150px;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box2 {
+            height: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        .circles {
+            height: 10px;
+            width: 17%;
+            border-radius: 60%;
+            margin-left: 6%;
+            transition: 0.5s linear;
+        }
+
+        .circle1 {
+            border: 1px solid;
+            animation: crl1 3s linear infinite;
+        }
+
+        @keyframes crl1 {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle2 {
+            background-color: rgb(0, 200, 175);
+            animation: crl2 3s linear infinite;
+        }
+
+        @keyframes crl2 {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle3 {
+            background-color: red;
+            animation: crl3 3s linear infinite;
+        }
+
+        @keyframes crl3 {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle4 {
+            border: 1px solid;
+            animation: crl4 3s linear infinite;
+        }
+
+        @keyframes crl4 {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle5 {
+            background-color: rgb(0, 200, 175);
+            animation: crl5 3s linear infinite;
+        }
+
+        @keyframes crl5 {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle6 {
+            border: 1px solid;
+            animation: crl6 3s linear infinite;
+        }
+
+        @keyframes crl6 {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle7 {
+            background-color: purple;
+            animation: crl7 3s linear infinite;
+        }
+
+        @keyframes crl7 {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle8 {
+            border: 1px solid;
+            animation: crl8 3s linear infinite;
+        }
+
+        @keyframes crl8 {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle9 {
+            border: 1px solid;
+            animation: crl9 3s linear infinite;
+        }
+
+        @keyframes crl9 {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+        }
+
+        .circle10 {
+            background-color: rgb(0, 200, 175);
+            animation: crl10 3s linear infinite;
+        }
+
+        @keyframes crl10 {
+            0% {
+                opacity: 1;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+        }
+
+        .img-div8 {
+            height: auto;
+            width: 15%;
+            position: absolute;
+            margin-left: 80%;
+            margin-top: -150px;
+        }
+
+        .imge-div {
+            height: 40px;
+            width: 0%;
+            position: absolute;
+            top: 95px;
+            left: 16%;
+            animation: div 3s linear infinite;
+        }
+
+        @keyframes div {
+            0% {
+                width: 0%;
+            }
+
+            50% {
+                width: 20%;
+
+            }
+
+            100% {
+                width: 20%;
+
+            }
+        }
+
+        .dot-div {
+            height: 20px;
+            width: 10%;
+            position: absolute;
+            top: 90px;
+            left: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dot {
+            height: 10px;
+            width: 30%;
+            background-color: white;
+            border-radius: 60%;
+            animation: dot 3s linear infinite;
+        }
+
+        @keyframes dot {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .bg {
+            height: 200px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-boxes {
+            height: 50px;
+            width: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: slides 9s linear infinite;
+            animation-play-state: running;
+        }
+
+        @keyframes slides {
+            0% {
+                left: 0%;
+            }
+
+            100% {
+                left: 100%;
+            }
+
+        }
+
+        .slide-1 {
+            animation-delay: 1s;
+        }
+
+        .slide-2 {
+            animation-delay: 2.5s;
+        }
+
+        .slide-3 {
+            animation-delay: 4s;
+        }
+
+        .slide-4 {
+            animation-delay: 5.5s;
+        }
+
+        .slide-5 {
+            animation-delay: 7s;
+        }
+
+        .slide-6 {
+            animation-delay: 8.5s;
+        }
+
+        .slider1 {
+            height: 50px;
+            width: 100%;
+            position: relative;
+
+        }
+
+        .bg1 {
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .bg1-div {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .bg1-div1 {
+            height: auto;
+            width: 70%;
+        }
+
+        .bg1-div2 {
+            height: auto;
+            width: 70%;
+        }
+
+        .bg1-div1>h1 {
+            font-size: 40px;
+            font-weight: 700;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .bg1-div2>p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .button2 {
+            height: 48px;
+            width: 12%;
+            border-radius: 10px;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            background-color: rgb(0, 200, 175);
+            color: white;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .bg2 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg2div1,
+        .bg4div1,
+        .bg5div1,
+        .bg6div1 {
+            height: auto;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bg3div1 {
+            height: auto;
+            width: 35%;
+        }
+
+        .bg2div3,
+        .bg3div3,
+        .bg4div3,
+        .bg5div3,
+        .bg6div3 {
+            height: auto;
+            width: 30%;
+
+        }
+
+        .bg3div4,
+        .bg4div4,
+        .bg5div4,
+        .bg6div4 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .bg2div3>h1,
+        .bg3div3>h1,
+        .bg4div3>h1,
+        .bg5div3>h1,
+        .bg6div3>h1 {
+            font-size: 13px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .bg2div4 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .bg2div4>h1,
+        .bg3div4>h1,
+        .bg4div4>h1,
+        .bg5div4>h1,
+        .bg6div4>h1 {
+            font-size: 30px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .bg2div5,
+        .bg3div5,
+        .bg4div5,
+        .bg6div5 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .bg5div5 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .bg2div5>p,
+        .bg3div5>p,
+        .bg4div5>p,
+        .bg5div5>p,
+        .bg6div5>p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .bg2div2,
+        .bg4div2,
+        .bg5div2 {
+            height: auto;
+            width: 55%;
+            position: relative;
+        }
+
+        .bg3div2,
+        .bg6div2 {
+            height: auto;
+            width: 55%;
+            position: relative;
+        }
+
+        .button3 {
+            height: 48px;
+            width: 35%;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            background-color: rgb(0, 200, 175);
+            color: white;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .bg2div6 {
+            height: auto;
+            width: 30%;
+            position: absolute;
+            top: 40px;
+            left: 52%;
+        }
+
+        .bg2div7 {
+            height: auto;
+            width: 30%;
+            position: absolute;
+            top: 80px;
+            left: 15%;
+        }
+
+        .bg3 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg3div6 {
+            height: auto;
+            width: 16%;
+            position: absolute;
+            top: 130px;
+            left: 14%;
+        }
+
+        .bg3div7 {
+            height: auto;
+            width: 29%;
+            position: absolute;
+            top: 30px;
+            left: 0;
+        }
+
+        .bg4 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg4div6 {
+            height: auto;
+            width: 15%;
+            position: absolute;
+            bottom: 40px;
+            left: 80%;
+            z-index: 1;
+        }
+
+        .bg4div7 {
+            height: auto;
+            width: 25%;
+            position: absolute;
+            bottom: 120px;
+            left: 75%;
+        }
+
+        .bg5 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg5div6 {
+            height: auto;
+            width: 25%;
+            position: absolute;
+            top: 35px;
+            left: 72%;
+        }
+
+        .bg5div7 {
+            height: auto;
+            width: 15%;
+            position: absolute;
+            top: 20px;
+            left: 84%;
+        }
+
+        .bg6 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg6div6 {
+            height: auto;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .bg7 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg7div1 {
+            height: auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .bg7div2 {
+            height: auto;
+            width: 100%;
+        }
+
+        .bg7div3 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .bg7div2>h1 {
+            font-size: 30px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .bg7div3>p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
+            font-family: proxima-nova, sans-serif;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .button4 {
+            height: 60px;
+            width: 40%;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: none;
+            font-size: 17px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            background-color: rgb(0, 200, 175);
+            color: white;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .bg8 {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .bg8div1 {
+            height: auto;
+            width: 10%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .bg8div2 {
+            height: auto;
+            width: 25%;
+            position: absolute;
+            top: 0;
+            left: 20%;
+        }
+
+        .bg8div3 {
+            height: auto;
+            width: 40%;
+            position: absolute;
+            top: 30px;
+            left: 55%;
+            z-index: -1;
+        }
+
+        .bg8div4 {
+            height: auto;
+            width: 25%;
+            position: absolute;
+            top: 75px;
+            left: 11%;
+        }
+
+        .bg8div5 {
+            height: auto;
+            width: 20%;
+            position: absolute;
+            bottom: 170px;
+            left: 25%;
+        }
+
+        .bg8div6 {
+            height: auto;
+            width: 15%;
+            position: absolute;
+            bottom: 170px;
+            left: 47%;
+        }
+
+        .bg8div7 {
+            height: auto;
+            width: 8%;
+            position: absolute;
+            top: 40px;
+            left: 63%;
+        }
+
+        .bg8div8 {
+            height: auto;
+            width: 10%;
+            position: absolute;
+            top: 150px;
+            left: 64%;
+        }
+
+        .bg8div9 {
+            height: auto;
+            width: 10%;
+            position: absolute;
+            top: 180px;
+            right: 20%;
+        }
+
+        .bg8div10 {
+            height: auto;
+            width: 9%;
+            position: absolute;
+            bottom: 160px;
+            right: 17%;
+        }
+
+        .bg8div11 {
+            height: auto;
+            width: 10%;
+            position: absolute;
+            top: 70px;
+            right: 0;
+        }
+
+        .bg8div12 {
+            height: auto;
+            width: 15%;
+            position: absolute;
+            top: 70px;
+            right: 5%;
+        }
+
+        .bg-1 {
+            height: 150vh;
+            width: 100%;
+        }
+
+        .bg-1div1 {
+            height: auto;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+
+        }
+
+        .bg-1div2 {
+            height: auto;
+            width: 55%;
+        }
+
+        .bg-1div3 {
+            height: auto;
+            width: 100%;
+        }
+
+        .bg-1div3>h1 {
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .bg-1div4>p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
+            color: rgb(0, 0, 0);
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .button-1 {
+            height: 48px;
+            width: 17%;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            background-color: rgb(0, 200, 175);
+            color: white;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .bg-1div5 {
+            height: auto;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bg-1div6,
+        .bg-1div7,
+        .bg-1div8 {
+            height: auto;
+            width: 31%;
+            border: 1px solid;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .imge-div2 {
+            height: 120px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imge-div1 {
+            height: 120px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imge-div3 {
+            height: 120px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-1 {
+            height: 100%;
+            width: 50%;
+        }
+
+        .image-2 {
+            height: 30%;
+            width: 50%;
+        }
+
+        .image-3 {
+            height: 70%;
+            width: 50%;
+        }
+
+        .bg-1div9,
+        .bg-1div10,
+        .bg-1div11 {
+            height: auto;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .bg-1div9>p,
+        .bg-1div10>p,
+        .bg-1div11>p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 36px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .bg-1div-1 {
+            height: auto;
+            width: 90%;
+            margin: auto;
+            margin-top: 30px;
+            border-top: 1px solid;
+            border-right: none;
+        }
+
+        .bg-1div-2 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bg-1div-3 {
+            height: auto;
+            width: 50%;
+            border-right: 1px solid;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bg-1div-4 {
+            height: 75px;
+            width: 100%;
+            border-right: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-1div-5 {
+            height: 80px;
+            width: 100%;
+            border-right: none;
+            border-left: none;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bg-1div-6>h1 {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgb(0, 0, 0);
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .bg-1div-6 {
+            height: auto;
+            width: 50%;
+            border-right: 1px solid;
+            border-left: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading {
+            font-size: 32px;
+            font-weight: 700;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .button-2 {
+            height: 48px;
+            width: 35%;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            background-color: rgb(0, 200, 175);
+            color: white;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .bg-1div-7 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-2 {
+            height: 260vh;
+            width: 90%;
+            margin: auto;
+            background-color: rgb(231, 254, 248);
+        }
+
+        .bg-2div1 {
+            height: 500px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .imagee {
+            height: 60%;
+            width: 50%;
+            z-index: 1;
+        }
+
+        .bg-2div2 {
+            height: auto;
+            width: 20%;
+            position: absolute;
+            top: 90px;
+            left: 43%;
+        }
+
+        .bg-2div3 {
+            height: auto;
+            width: 20%;
+            position: absolute;
+            bottom: 250px;
+            left: 60%;
+        }
+
+        .bg-2div4 {
+            height: auto;
+            width: 20%;
+            position: absolute;
+            bottom: 100px;
+            left: 22%;
+            z-index: 1;
+        }
+
+        .bg-2div5 {
+            height: 20px;
+            width: 5%;
+            position: absolute;
+            bottom: 111px;
+            left: 55.5%;
+            transition: 0.5s linear;
+            animation: div5 2s linear infinite;
+        }
+
+        @keyframes div5 {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .bg-2div6 {
+            height: 40px;
+            width: 16%;
+            position: absolute;
+            bottom: 190px;
+            left: 33%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .bg-2div7 {
+            height: 25px;
+            width: 18%;
+            position: absolute;
+            top: 210px;
+            left: 32%;
+            z-index: 1;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+
+
+        }
+
+        .bg-2div8 {
+            height: auto;
+            width: 50%;
+        }
+
+        .bg-2div9 {
+            height: auto;
+            width: 50%;
+            transition: 0.5s linear;
+            animation: dots 3s linear infinite;
+        }
+
+        @keyframes dots {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(20px);
+            }
+        }
+
+        .bg-2div10 {
+            height: auto;
+            width: 10%;
+            position: absolute;
+            top: 80px;
+            left: 23%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bg-2dots {
+            height: auto;
+            width: 100%;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            justify-content: end;
+        }
+
+        .row1 {
+            height: 10px;
+            width: 10%;
+            border-radius: 60%;
+            background-color: green;
+            transition: 0.5s linear;
+            animation: dot-4 3s linear infinite;
+        }
+
+        @keyframes dot-4 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row2 {
+            height: 10px;
+            width: 10%;
+            margin-left: 5%;
+            border-radius: 60%;
+            border: 1px solid;
+            transition: 0.5s linear;
+            animation: dot-2 3s linear infinite;
+        }
+
+        @keyframes dot-2 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row3dot1 {
+            height: 10px;
+            width: 10%;
+            margin-left: 5%;
+            border-radius: 60%;
+            background-color: red;
+            transition: 0.5s linear;
+            animation: dot-1 3s linear infinite;
+        }
+
+        @keyframes dot-1 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row3dot2 {
+            height: 10px;
+            width: 10%;
+            margin-left: 5%;
+            border-radius: 60%;
+            background-color: green;
+            transition: 0.5s linear;
+            animation: dot-5 3s linear infinite;
+        }
+
+        @keyframes dot-5 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+
+        .row3dot3 {
+            height: 10px;
+            width: 10%;
+            margin-left: 5%;
+            border-radius: 60%;
+            border: 1px solid;
+            transition: 0.5s linear;
+            animation: dot-2 3s linear infinite;
+        }
+
+        @keyframes dot-2 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row4dot1 {
+            height: 10px;
+            width: 10%;
+            margin-left: 5%;
+            border-radius: 60%;
+            border: 1px solid;
+            transition: 0.5s linear;
+            animation: dot-1 3s linear infinite;
+        }
+
+        @keyframes dot-1 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row4dot2 {
+            height: 10px;
+            width: 10%;
+            margin-left: 5%;
+            border-radius: 60%;
+            background-color: purple;
+        }
+
+        .dotsdiv {
+            height: auto;
+            width: 5%;
+            position: absolute;
+            top: 140px;
+            left: 44%;
+            z-index: 1;
+        }
+
+        .dotsdiv1 {
+            height: auto;
+            width: 100%;
+            margin-top: 3px;
+            display: flex;
+            justify-content: start;
+        }
+
+        .row-1 {
+            height: 8px;
+            width: 15%;
+            border: 1px solid;
+            border-radius: 60%;
+            transition: 0.5s linear;
+            animation: dot-4 3s linear infinite;
+        }
+
+        @keyframes dot-4 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row-2dot1 {
+            height: 8px;
+            width: 15%;
+            background-color: green;
+            border-radius: 60%;
+            transition: 0.5s linear;
+            animation: dot-5 3s linear infinite;
+        }
+
+        @keyframes dot-5 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+
+        .row-2dot2 {
+            height: 8px;
+            width: 15%;
+            background-color: red;
+            margin-left: 5%;
+            border-radius: 60%;
+            transition: 0.5s linear;
+            animation: dot-2 3s linear infinite;
+        }
+
+        @keyframes dot-2 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row-3dot1 {
+            height: 8px;
+            width: 15%;
+            border: 1px solid;
+            border-radius: 60%;
+            transition: 0.5s linear;
+            animation: dot-1 3s linear infinite;
+        }
+
+        @keyframes dot-1 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row-3dot2 {
+            height: 8px;
+            width: 15%;
+            background-color: green;
+            border-radius: 60%;
+            margin-left: 5%;
+        }
+
+        .row-3dot3 {
+            height: 8px;
+            width: 15%;
+            border: 1px solid;
+            border-radius: 60%;
+            margin-left: 5%;
+            transition: 0.5s linear;
+            animation: dot-2 3s linear infinite;
+        }
+
+        @keyframes dot-2 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row-4dot1 {
+            height: 8px;
+            width: 15%;
+            background-color: purple;
+            border-radius: 60%;
+            transition: 0.5s linear;
+            animation: dot-1 3s linear infinite;
+        }
+
+        @keyframes dot-1 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .row-4dot2 {
+            height: 8px;
+            width: 15%;
+            border: 1px solid;
+            border-radius: 60%;
+            margin-left: 5%;
+            transition: 0.5s linear;
+            animation: dot-3 3s linear infinite;
+        }
+
+        @keyframes dot-3 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .graph {
+            height: 30px;
+            width: 7%;
+            position: absolute;
+            z-index: 1;
+            top: 160px;
+            left: 32%;
+            animation: div 3s linear infinite;
+        }
+
+        @keyframes div {
+            0% {
+                width: 0%;
+            }
+
+            50% {
+                width: 7%;
+
+            }
+
+            100% {
+                width: 7%;
+
+            }
+        }
+
+        .whitedot {
+            height: 10px;
+            width: 1%;
+            background-color: white;
+            border-radius: 60%;
+            position: absolute;
+            top: 155px;
+            left: 37.5%;
+            z-index: 1;
+            animation: dot 3s linear infinite;
+        }
+
+        @keyframes dot {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .imagediv2 {
+            height: 100%;
+            width: 100%;
+            transition: 0.5s linear;
+            animation: animate 3s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .imagediv6 {
+            height: 100%;
+            width: 150%;
+            transition: 0.5s linear;
+            animation: anime 10s linear infinite;
+        }
+
+        @keyframes anime {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100% {
+                transform: translateX(-300px);
+            }
+        }
+
+        .bo-x {
+            height: auto;
+            width: 40%;
+            margin: auto;
+        }
+
+        .bo-xdiv1 {
+            height: auto;
+            width: 100%;
+        }
+
+        .bo-xdiv2 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .bo-xdiv1>h1 {
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .bo-xdiv2>p,
+        .bg-3div3>p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: proxima-nova, sans-serif;
+        }
+
+        .span {
+            color: rgb(0, 200, 175);
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .span:hover {
+            color: black;
+        }
+
+        .bo-xes1 {
+            height: 50px;
+            width: 75%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .name {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+            height: 50px;
+            padding-left: 20px;
+            width: 48%;
+            border-radius: 10px;
+            border: 1px solid;
+        }
+
+        .describe {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: proxima-nova, sans-serif;
+            color: rgb(0, 0, 0);
+            height: 230px;
+            padding-left: 20px;
+            padding-top: 20px;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid;
+            margin-top: 20px;
+        }
+
+        .bo-x2 {
+            height: auto;
+            width: 75%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .bo-x3 {
+            height: auto;
+            width: 75%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-3 {
+            height: 62px;
+            width: 35%;
+            border-radius: 10px;
+            margin-top: 30px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: proxima-nova, sans-serif;
+            background-color: rgb(0, 200, 175);
+            color: white;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        .bg-3 {
+            height: 140vh;
+            width: 100%;
+        }
+
+        .bg-3div1 {
+            height: auto;
+            width: 30%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .bg-3div2 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-1 {
+            height: 50%;
+            width: 50%;
+        }
+
+        .bg-3div3 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .bg-3div4 {
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .bg-3div5 {
+            height: 55px;
+            width: 18%;
+            border-radius: 10px;
+            border: 1px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s linear;
+            cursor: pointer;
+        }
+
+        #icon {
+            color: rgb(0, 200, 175);
+            font-size: 25px;
+        }
+        .bg-3div6{
+            height: 300px;
+            width: 100%;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .bg-3div7{
+            height: auto;
+            width: 18%;
+            list-style-type: none;
+        }
+        .list-1{
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 20px;
+            color: rgb(0, 0, 0);
+            font-family:  proxima-nova, sans-serif;
+            transition: all 0.5s linear;
+            cursor: pointer;
+            margin-left: 3%;
+        }
+        .list-2{
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 20px;
+            color: rgb(0, 0, 0);
+            font-family:  proxima-nova, sans-serif;
+            transition: all 0.5s linear;
+            cursor: pointer;
+            margin-left: 3%;
+        }
+        .bg-3div8{
+            height: auto;
+            width: 97%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bg-3div8>h1{
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 20px;
+            color: rgb(0, 0, 0);
+            font-family:  proxima-nova, sans-serif;
+        }
+        .bg6div7{
+            height: 30px;
+            width: 20%;
+            position: absolute;
+            top: 120px;
+            right: 0;
+            display: flex;
+            justify-content: end;
+           
+           
+        }
+        .bg6div8{
+            height: 30px;
+            width: 20%;
+            transition: all 0.5s linear;
+            animation: arrow 3s linear infinite;
+        }
+        @keyframes arrow {
+            0%{
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(-110px);
+               
+            }
+            100%{
+                transform: translateY(100px);
+                opacity: 0;
+
+            }
+            
+        }
+        .bg6div9{
+            height: 30px;
+            width: 40%;
+            position: absolute;
+            top: -40px;
+           left: -18%;
+           transform: all 0.5s linear;
+           animation: lines 3s linear infinite;
+        }
+        @keyframes lines {
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+            
+        }
+
+
+        /*////////////////////////////////////////////////////////////////////////////*/
+        @media screen and (max-width:1200px) {
+            .div1 {
+                display: none;
+            }
+
+            .div2 {
+                display: none;
+            }
+
+            .div {
+                margin-left: -80%;
+            }
+
+            .img-div3 {
+                margin-top: -150px;
+            }
+
+            .box1 {
+                margin-top: -120px;
+            }
+
+            .img-div8 {
+                margin-top: -100px;
+            }
+
+            .slides {
+                height: 100px;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            .div3 {
+                width: 100%;
+            }
+
+            .div-4 {
+                width: 100%;
+            }
+
+            .background {
+                flex-wrap: wrap;
+            }
+
+            .box1 {
+                margin-top: -150px;
+            }
+
+            .img-div8 {
+                margin-top: -150px;
+            }
+
+
+        }
+
+        @media screen and (max-width:600px) {
+            .logo {
+                width: 150%;
+
+            }
+
+            .div {
+                margin-left: -60%;
+            }
+
+            .slides {
+                height: 70px;
+            }
+
+            .imge-div {
+                margin-top: -80px;
+            }
+
+            .img-div6 {
+                margin-left: 30%;
+            }
+
+            .box1 {
+                margin-top: -80px;
+                height: 50px;
+            }
+
+            .circles {
+                height: 5px;
+            }
+
+            .img-div8 {
+                margin-top: -60px;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            .button1 {
+                height: 50px;
+                margin-top: 0px;
+                width: 50%;
+
+            }
+
+            .slides {
+                height: 60px;
+            }
+
+            .img-div3 {
+                margin-top: -80px;
+            }
+
+            .img-div4 {
+                bottom: 20px;
+            }
+
+            .img-div6 {
+                bottom: 20px;
+            }
+
+            .box1 {
+                height: 30px;
+            }
+
+            .img-div7 {
+                margin-top: 50px;
+            }
+        }
+
+        @media screen and (max-width:1500px) {
+            .bg1-div2 {
+                width: 60%;
+            }
+            .bg8div10{
+                bottom: 300px;
+            }
+            .bg8div5{
+                bottom: 250px;
+            }
+            .bg8div6{
+                bottom: 300px;
+            }
+
+        }
+
+        @media screen and (max-width:1200px) {
+            .bg1-div2 {
+                width: 95%;
+            }
+
+            .bg1-div1 {
+                width: 90%;
+            }
+            .bg8div10{
+                bottom: 370px;
+            }
+            .bg8div5{
+                bottom: 350px;
+            }
+            .bg8div6{
+                bottom: 430px;
+            }
+            .button-2{
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width:900px) {
+            .bg1-div2 {
+                width: 85%;
+            }
+
+            .bg1-div1 {
+                width: 95%;
+            }
+
+            .button2 {
+                width: 20%;
+            }
+
+            .images {
+                width: 100%;
+            }
+
+            .button3 {
+                width: 60%;
+            }
+
+            .bg2div6 {
+                top: 30px;
+            }
+
+            .bg2div7 {
+                top: 40px;
+            }
+
+            .bg3div6 {
+                top: 80px;
+            }
+
+            .bg3div7 {
+                top: 20px;
+            }
+
+            .bg4div6 {
+                bottom: 10px;
+
+            }
+
+            .bg4div7 {
+                bottom: 60px;
+            }
+
+            .bg5div6 {
+                top: 50px;
+            }
+
+            .bg5div7 {
+                top: 30px;
+            }
+            .button-1{
+                width: 30%;
+            }
+            .bg7div1{
+                width: 100%;
+            }
+            .bg8div10{
+                bottom: 430px;
+            }
+            .bg8div5{
+                bottom: 440px;
+            }
+            .bg8div6{
+                bottom: 500px;
+            }
+            .bg-1div1{
+                width: 100%;
+            }
+            .bg-1div2{
+                width: 70%;
+            }
+            .button-1{
+                width: 30%;
+            }
+            .bg-1div6{
+                width: 100%;
+            }
+            .bg-1div7{
+                width: 100%;
+            }
+            .bg-1div8{
+                display: none;
+            }
+            .bg-2{
+                width: 100%;
+            }
+            .bg-2div1{
+                width: 100%;
+            }
+            .bo-x{
+                width: 60%;
+            }
+            .bo-xes1{
+                width: 90%;
+            }
+            .bo-x2{
+                width: 90%;
+            }
+            .button-3{
+                width: 50%;
+            }
+            .bg-3div1{
+                width: 50%;
+            }
+            .bg-3div7{
+                width: 30%;
+            }
+            .bg-3div6{
+                height: 600px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .bg-3div8{
+                width: 90%;
+            }
+           
+        }
+
+        @media screen and (max-width:600px) {
+            .bg1-div1>h1 {
+                font-size: 30px;
+            }
+
+            .bg1-div2 {
+                width: 100%;
+            }
+
+            .bg1-div1 {
+                width: 100%;
+            }
+
+            .button2 {
+                width: 40%;
+            }
+
+            .bg-boxes {
+                width: 13%;
+            }
+
+            .bg2div1 {
+                width: 100%;
+            }
+
+            .bg2div2 {
+                width: 100%;
+            }
+
+            .bg2 {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+            }
+
+            .bg3div2 {
+                width: 100%;
+            }
+
+            .bg3div1 {
+                width: 100%;
+            }
+
+            .bg3 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .bg4div1 {
+                width: 100%;
+            }
+
+            .bg4div2 {
+                width: 100%;
+            }
+
+            .bg4 {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+            }
+
+            .bg5div1 {
+                width: 100%;
+            }
+
+            .bg5div2 {
+                width: 100%;
+            }
+
+            .bg5 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .button3 {
+                width: 40%;
+            }
+            .bg-3div8{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .bg-3div7{
+                width: 40%;
+            }
+            .bg-3div6{
+                height: 600px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .bg-3div1{
+                width: 90%;
+            }
+            .button-3{
+                width: 80%;
+            }
+            .bo-x{
+                width: 100%;
+            }
+            .bo-x2{
+                width: 100%;
+            }
+            .bo-xes1{
+                height: 100px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .name{
+                width: 100%;
+                margin-top: 10px;
+            }
+            .bg-1div7{
+               display: none;
+            }
+            .bg-1div2{
+                width: 100%;
+            }
+            .button-1{
+               display: none;
+            }
+            .bg8div10{
+                bottom: 480px;
+            }
+            .bg8div5{
+                bottom: 550px;
+            }
+            .bg8div6{
+                bottom: 600px;
+            }
+            .button4{
+                width: 60%;
+            }
+            .button-2{
+                width: 60px;
+            }
+            .bg6div2 {
+                width: 100%;
+            }
+
+            .bg6div1 {
+                width: 100%;
+            }
+
+            .bg6 {
+                display: flex;
+                flex-direction:  column-reverse;
+                justify-content: space-between;
+            }
+           
+            
+        }
+
+        @media screen and (max-width:400px) {
+            .button2 {
+                width: 50%;
+            }
+
+            .bg3div6 {
+                top: 70px;
+            }
+            .bg-1div2{
+                width: 100%;
+            }
+            .bg-1div9{
+                width: 100%;
+            }
+            .button-2{
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <div class="div">
+                <img class="logo" src="./NeoReach_ Influencer Marketing Agency for Global Brands/logo.svg" alt="">
+            </div>
+            <ul class="div1">
+                <main class="main">
+                    <li class="list"><a href="#">Solutions</a></li>
+                    <div class="dropdown">
+                        <div class="boxes">
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-services.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Managed Services</h1>
+                                    <p>Full service influencer marketing campaigns.</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-software.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Software</h1>
+                                    <p>Seamlessly search,manage,and track influencer campaign.</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-paid.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Paid Media/Influencer Ads</h1>
+                                    <p>Develop and execute influencer driven performance marketing campaigns.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-api.gif"
+                                        alt="">
+
+                                </div>
+                                <div class="div-2">
+                                    <h1>API</h1>
+                                    <p>Integrate over 400+ custom data points into in-house tools and technologies.</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-creator.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Creater payments</h1>
+                                    <p>Develop and execute influencer driven performance marketing campaigns.</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-influencers.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Influencers</h1>
+                                    <p>Develop and execute influencer driven performance marketing campaigns.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img id="img" src="./NeoReach_ Influencer Marketing Agency for Global Brands/underline@2x.png"
+                        alt="">
+                </main>
+                <main class="class">
+                    <li class="list"><a href="#">Strategy</a></li>
+                    <div class="dropdown">
+                        <div class="boxes">
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-events.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-3">
+                                    <h1>Events & Trade Shows</h1>
+                                    <p>Maximize your presence at events and trade shows with influencers and creators.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-sweepstakes.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-3">
+                                    <h1>Contests & Sweepstakes</h1>
+                                    <p>Engage your audience and boost branding via influencer-led contests and
+                                        sweepstakes.</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-seeding.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-3">
+                                    <h1>Product seeding & distribution</h1>
+                                    <p>a.k.a influencer gifting. Send your products to influencers to use and promote to
+                                        their followers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-icc.gif"
+                                        alt="">
+
+                                </div>
+                                <div class="div-3">
+                                    <h1>Influencer Content Creation & UGC</h1>
+                                    <p>Create killer branded content with user generated content powered by influencers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-surveys.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-3">
+                                    <h1>Custom Surveys & Reports </h1>
+                                    <p>Gain actionable insights with customized surveys and in-depth reports tailored to
+                                        your industory.</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-whitelisting.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-3">
+                                    <h1>Influencer Ads</h1>
+                                    <p>Amplify your marketing impact with precisely targeted influencers ads.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <img id="img" src="./NeoReach_ Influencer Marketing Agency for Global Brands/underline@2x.png"
+                        alt="">
+                </main>
+                <main class="main">
+                    <li class="list"><a href="#">Resources</a></li>
+                    <div class="dropdown">
+                        <div class="boxes">
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-blog.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Blog</h1>
+                                    <p>Stay updated with the latest influencer marketing trends,tips,and topics.</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-toplists.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Top Lists</h1>
+                                    <p>Discover the most definitive list of influencers across a range of categories.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-topspenders.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Top Spenders</h1>
+                                    <p>See the top brand spenders in influencer marketing this week.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxes">
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-industryreports.gif"
+                                        alt="">
+
+                                </div>
+                                <div class="div-2">
+                                    <h1>Industory Reports</h1>
+                                    <p>Explore leading influencer marketing industory reports.</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-guides.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Guides</h1>
+                                    <p>Degital Media Guides</p>
+                                </div>
+                            </div>
+                            <div class="boxes1">
+                                <div class="div-1">
+                                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/menuicon-infographics.gif"
+                                        alt="">
+                                </div>
+                                <div class="div-2">
+                                    <h1>Infographics</h1>
+                                    <p>Infographics</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img id="img" src="./NeoReach_ Influencer Marketing Agency for Global Brands/underline@2x.png"
+                        alt="">
+                </main>
+                <main class="main">
+                    <li class="list"><a href="#">Pricing</a></li>
+                    <img id="img" src="./NeoReach_ Influencer Marketing Agency for Global Brands/underline@2x.png"
+                        alt="">
+                </main>
+                <main class="main">
+                    <li class="list"><a href="#">Case Studies</a></li>
+                    <img id="img" src="./NeoReach_ Influencer Marketing Agency for Global Brands/underline@2x.png"
+                        alt="">
+                </main>
+            </ul>
+            <div class="div2">
+                <main class="main">
+                    <li class="list"><a href="#">Login</a></li>
+                    <div class="dropdown1">
+                        <h1>For Creators</h1>
+                        <h2>For Brands & Agencies</h2>
+                    </div>
+                    <img id="img" src="./NeoReach_ Influencer Marketing Agency for Global Brands/underline@2x.png"
+                        alt="">
+                </main>
+                <button class="button">GET STARTED</button>
+            </div>
+        </nav>
+        <section class="background">
+            <div class="div3">
+                <div class="div4">
+                    <h1>Get Real ROI from Influencer Marketing</h1>
+                </div>
+                <div class="div5">
+                    <p>An influencer marketing agency blending top creators, innovative technology, and deep market
+                        insights to achieve transparent, measurable success at any budget.</p>
+                </div>
+                <button class="button1">LEARN MORE</button>
+            </div>
+            <div class="div-4">
+                <div class="img-div">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/circle-orange@2x.png" alt="">
+                </div>
+                <div class="img-div1">
+                    <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/hero-base1@2x.png"
+                        alt="">
+                    <div class="img-div3">
+                        <img class="image3"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/talk-bubble@2x.png" alt="">
+                    </div>
+                    <div class="img-div4">
+                        <img class="image4"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/talk-bubble@2x.png" alt="">
+                    </div>
+                    <div class="img-div6">
+                        <img class="image"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/bullhorn@2x.png" alt="">
+                    </div>
+                    <div class="parent-slider">
+                        <div class="relative-parent">
+                            <img class="slides slide1"
+                                src="./NeoReach_ Influencer Marketing Agency for Global Brands/card-girl@2x.png" alt="">
+                            <img class="slides slide2"
+                                src="./NeoReach_ Influencer Marketing Agency for Global Brands/card-boy@2x.png" alt="">
+                            <img class="slides slide3"
+                                src="./NeoReach_ Influencer Marketing Agency for Global Brands/card-girl@2x.png" alt="">
+                            <img class="slides slide4"
+                                src="./NeoReach_ Influencer Marketing Agency for Global Brands/card-boy@2x.png" alt="">
+                            <img class="slides slide5"
+                                src="./NeoReach_ Influencer Marketing Agency for Global Brands/card-girl@2x.png" alt="">
+                            <img class="slides slide6"
+                                src="./NeoReach_ Influencer Marketing Agency for Global Brands/card-boy@2x.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="img-div2">
+                    <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/hero-base2@2x.png"
+                        alt="">
+                    <div class="img-div7">
+                        <img class="image2"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/graph-wave@2x.png" alt="">
+                    </div>
+                    <div class="box">
+                        <div class="boxes2">
+                            <img class="image"
+                                src="./NeoReach_ Influencer Marketing Agency for Global Brands/search-bar@2x.png"
+                                alt="">
+                        </div>
+                        <div class="boxes3">
+                            <img class="image"
+                                src="./NeoReach_ Influencer Marketing Agency for Global Brands/search-dots.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="img-div8">
+                        <img class="image"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/circle-pink@2x.png" alt="">
+                    </div>
+                    <div class="box1">
+                        <div class="box2">
+                            <div class="circles circle1"></div>
+                        </div>
+                        <div class="box2">
+                            <div class="circles circle2"></div>
+                            <div class="circles circle3"></div>
+                        </div>
+                        <div class="box2">
+                            <div class="circles circle4"></div>
+                            <div class="circles circle5"></div>
+                            <div class="circles circle6"></div>
+                        </div>
+                        <div class="box2">
+                            <div class="circles circle7"></div>
+                            <div class="circles circle8"></div>
+                            <div class="circles circle9"></div>
+                            <div class="circles circle10"></div>
+                        </div>
+                    </div>
+                    <div class="imge-div">
+                        <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/graph-up.svg"
+                            alt="">
+                    </div>
+                    <div class="dot-div">
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg">
+            <div class="slider1">
+
+                <img class="bg-boxes slide-1"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/logo-airbnb@2x.png" alt="">
+
+
+                <img class="bg-boxes slide-2"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/logo-amazon@2x.png" alt="">
+
+
+                <img class="bg-boxes slide-3"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/logo-nyt@2x.png" alt="">
+
+
+                <img class="bg-boxes slide-4"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/logo-honda@2x.png" alt="">
+
+
+                <img class="bg-boxes slide-5"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/logo-walmart@2x.png" alt="">
+
+
+                <img class="bg-boxes slide-6"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/logo-bet@2x.png" alt="">
+            </div>
+
+        </section>
+        <section class="bg1">
+            <div class="bg1-div">
+                <div class="bg1-div1">
+                    <h1>Leading Global Influencer Marketing Agency</h1>
+                </div>
+                <div class="bg1-div2">
+                    <p>Our mission? To innovate and empower your brand with technology-enabled services that bring
+                        together creators, content, and insights across all platforms. We offer fully-managed influencer
+                        marketing agency services, UGC content creation, paid media, market research and more.</p>
+                </div>
+                <button class="button2">LEARN MORE</button>
+            </div>
+        </section>
+        <section class="bg2">
+            <div class="bg2div1">
+                <div class="bg2div3">
+                    <h1>ACCESS</h1>
+                </div>
+                <div class="bg2div4">
+                    <h1>Connected Network
+                        Of Influencers</h1>
+                </div>
+                <div class="bg2div5">
+                    <p>Years of executing campaigns have helped us shape strong direct relationships with influencers,
+                        bloggers, and other creators. Coupled with our data-backed insights into key demographics and
+                        KPI’s, we not only ensure the perfect fit - but the perfect relationship.</p>
+                </div>
+                <button class="button3">LEARN MORE</button>
+            </div>
+            <div class="bg2div2">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/work-illus1@2x.png"
+                    alt="">
+                <div data-aos="fade-up" data-aos-duration="2000" class="bg2div6">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/work1-photo2@2x.png" alt="">
+                </div>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+                <div data-aos="fade-up" data-aos-duration="2000" class="bg2div7">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/work1-photo1@2x.png" alt="">
+                </div>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+            </div>
+        </section>
+        <section class="bg3">
+            <div class="bg3div2">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/work-illus2@2x.png"
+                    alt="">
+                <div data-aos="fade-up" data-aos-duration="2000" class="bg3div6">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/work2-photo1@2x.png" alt="">
+                </div>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+                <div class="bg3div7">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/work2-bubble@2x.png" alt="">
+                </div>
+            </div>
+            <div class="bg3div1">
+                <div class="bg3div3">
+                    <h1>CREATE</h1>
+                </div>
+                <div class="bg3div4">
+                    <h1>Creative Strategy & Direction</h1>
+                </div>
+                <div class="bg3div5">
+                    <p>We infuse your brand’s core messaging into everything we produce by working alongside the talent
+                        to create authentic, story-driven content that lives beyond the campaign. We create key strategy
+                        points, geared toward distribution and promotion, optimized for brand recognition and
+                        conversion.</p>
+                </div>
+                <button class="button3">LEARN MORE</button>
+            </div>
+        </section>
+        <section class="bg4">
+            <div class="bg4div1">
+                <div class="bg4div3">
+                    <h1>MANAGE</h1>
+                </div>
+                <div class="bg4div4">
+                    <h1>Contracting & Activation</h1>
+                </div>
+                <div class="bg4div5">
+                    <p>Talent acquisition and management are key to a successful campaign. We manage the entire
+                        contracting and negotiating process - including pricing strategy, legal contracts, compliance,
+                        and everything in between. From campaign deliverables to final payment, we’ve got it covered</p>
+                </div>
+                <button class="button3">LEARN MORE</button>
+            </div>
+            <div class="bg4div2">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/work-illus3@2x.png"
+                    alt="">
+                <div class="bg4div6">
+                    <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/work3-shape.svg"
+                        alt="">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="2000" class="bg4div7">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/work3-photo1@2x.png" alt="">
+                </div>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+            </div>
+        </section>
+        <section class="bg5">
+            <div class="bg5div2">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/work-illus4@2x.png"
+                    alt="">
+                <div data-aos="fade-up" data-aos-duration="2000" class="bg5div6">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/work4-photo1@2x.png" alt="">
+                </div>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+                <div class="bg5div7">
+                    <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/work4-mag.svg"
+                        alt="">
+                </div>
+            </div>
+            <div class="bg5div1">
+                <div class="bg5div3">
+                    <h1>AMPLIFY</h1>
+                </div>
+                <div class="bg5div4">
+                    <h1>Paid Media</h1>
+                </div>
+                <div class="bg5div5">
+                    <p>Syndicate influencer content with an experienced approach to user acquisition and paid media. Our
+                        team will define ad auctions, budget allocations, offers, copy, creative and more, all on the
+                        basis of ROI-across all major ad auctions and channels including Facebook®, Instagram®, Google®,
+                        TikTok®, Snapchat® and more.</p>
+                </div>
+                <button class="button3">LEARN MORE</button>
+            </div>
+        </section>
+        <section class="bg6">
+            <div class="bg6div1">
+                <div class="bg6div3">
+                    <h1>INTEGRATE</h1>
+                </div>
+                <div class="bg6div4">
+                    <h1>Self-Service
+                        Software & APIs</h1>
+                </div>
+                <div class="bg6div5">
+                    <p>Our best-in-class self-service software and APIs allow for seamless Influencer campaign search,
+                        management, and tracking backed by analytics. Access a dedicated dashboard or integrate over
+                        400+ custom data points into in-house tools and technologies.</p>
+                </div>
+                <button class="button3">LEARN MORE</button>
+            </div>
+            <div class="bg6div2">
+                <img class="image"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/pricing-brands-bot@2x.png" alt="">
+                <div class="bg6div6">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/pricing-brands-top@2x.png"
+                        alt="">
+                        <div class="bg6div7">
+                            <div class="bg6div8">
+                                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/pricing-brands-arrow.svg" alt="">
+                            </div>
+                            <div class="bg6div9">
+                                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/pricing-brands-lines.svg" alt="">
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg7">
+            <div class="bg7div1">
+                <div class="bg7div2">
+                    <h1>Everything your team needs in one package.</h1>
+                </div>
+                <div class="bg7div3">
+                    <p>Whether you are looking for a YouTube superstar or an Instagram micro-influencer, you’re in good
+                        company. Sign up today and see why NeoReach has managed over $250 million worth of influencer
+                        marketing campaigns to date.</p>
+                </div>
+                <button class="button4">GET STARTED TODAY!</button>
+            </div>
+        </section>
+        <section class="bg8">
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div1">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/circle-mixed@2x.png"
+                    alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000"   class="bg8div2">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-boxes@2x.png"
+                    alt="">
+                <div class="bg8div3">
+                    <img class="image"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-sm-photo1@2x.png" alt="">
+                </div>
+
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div4">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-photo1@2x.png"
+                    alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div5">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-horn1@2x.png"
+                    alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div6">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/work2-photo1@2x.png"
+                    alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div7">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-horn2@2x.png"
+                    alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div8">
+                <img class="image"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-sm-photo2@2x.png" alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div9">
+                <img class="image"
+                    src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-sm-photo3@2x.png" alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div10">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-paper@2x.png"
+                    alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div  data-aos="fade-up" data-aos-duration="2000" class="bg8div11">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/circle-orange@2x.png"
+                    alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+            <div data-aos="fade-up" data-aos-duration="2000" class="bg8div12">
+                <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/package-photo3@2x.png"
+                    alt="">
+            </div>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+        </section>
+        <section class="bg-1">
+            <div class="bg-1div1">
+                <div class="bg-1div2">
+                    <div class="bg-1div3">
+                        <h1>What Winning Influencer Marketing Looks Like</h1>
+                    </div>
+                    <div class="bg-1div4">
+                        <p>See how top brands are successfully using NeoReach to activate, manage, and track influencer
+                            marketing campaigns at scale.</p>
+                    </div>
+
+                </div>
+                <button class="button-1">SEE ALL CASE STUDIES</button>
+            </div>
+            <div class="bg-1div5">
+                <div class="bg-1div6">
+                    <div class="imge-div1">
+                        <img class="image-1"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/sams-club-logo-black-and-white.png"
+                            alt="">
+                    </div>
+                    <div class="bg-1div9">
+                        <p>How NeoReach helped promote brand awareness and capitalize on Sam's Club's limited time
+                            offer.</p>
+                    </div>
+                    <div class="bg-1div-1">
+                        <div class="bg-1div-2">
+                            <div class="bg-1div-3">
+                                <div class="bg-1div-4">
+                                    <img class="image"
+                                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/cs-icon-graph.svg"
+                                        alt="">
+                                </div>
+                                <div class="bg-1div-4">
+                                    <h1 class="heading">2.5M</h1>
+                                </div>
+                            </div>
+                            <div class="bg-1div-3">
+                                <div class="bg-1div-4">
+                                    <img class="image"
+                                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/cs-icon-talk.svg"
+                                        alt="">
+                                </div>
+                                <div class="bg-1div-4">
+                                    <h1 class="heading">15.1K</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-1div-5">
+                            <div class="bg-1div-6">
+                                <h1>Total Impressions</h1>
+                            </div>
+                            <div class="bg-1div-6">
+                                <h1>Total Engagements</h1>
+                            </div>
+                        </div>
+                        <div class="bg-1div-7">
+                            <button class="button-2">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-1div7">
+                    <div class="imge-div2">
+                        <img class="image-2"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/black-nvidia-logo.png"
+                            alt="">
+                    </div>
+                    <div class="bg-1div10">
+                        <p>How NeoReach helped NVIDIA activate influencers for a back-to-school campaign.</p>
+                    </div>
+                    <div class="bg-1div-1">
+                        <div class="bg-1div-2">
+                            <div class="bg-1div-3">
+                                <div class="bg-1div-4">
+                                    <img class="image"
+                                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/cs-icon-graph.svg"
+                                        alt="">
+                                </div>
+                                <div class="bg-1div-4">
+                                    <h1 class="heading">3.3M</h1>
+                                </div>
+                            </div>
+                            <div class="bg-1div-3">
+                                <div class="bg-1div-4">
+                                    <img class="image"
+                                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/cs-icon-impressions.svg"
+                                        alt="">
+                                </div>
+                                <div class="bg-1div-4">
+                                    <h1 class="heading">5.7K</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-1div-5">
+                            <div class="bg-1div-6">
+                                <h1>Total Impressions</h1>
+                            </div>
+                            <div class="bg-1div-6">
+                                <h1>Link in Bio Clicks</h1>
+                            </div>
+                        </div>
+                        <div class="bg-1div-7">
+                            <button class="button-2">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-1div8">
+                    <div class="imge-div3">
+                        <img class="image-3"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/AE_Network_logo.black_.png"
+                            alt="">
+                    </div>
+                    <div class="bg-1div11">
+                        <p>NeoReach worked with A&E to grow awareness for the release of their documentary.</p>
+                    </div>
+                    <div class="bg-1div-1">
+                        <div class="bg-1div-2">
+                            <div class="bg-1div-3">
+                                <div class="bg-1div-4">
+                                    <img class="image"
+                                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/cs-icon-views.svg"
+                                        alt="">
+                                </div>
+                                <div class="bg-1div-4">
+                                    <h1 class="heading">1.8M+</h1>
+                                </div>
+                            </div>
+                            <div class="bg-1div-3">
+                                <div class="bg-1div-4">
+                                    <img class="image"
+                                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/cs-icon-influencers.svg"
+                                        alt="">
+                                </div>
+                                <div class="bg-1div-4">
+                                    <h1 class="heading">8</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-1div-5">
+                            <div class="bg-1div-6">
+                                <h1>Total Views</h1>
+                            </div>
+                            <div class="bg-1div-6">
+                                <h1>Creators Activated</h1>
+                            </div>
+                        </div>
+                        <div class="bg-1div-7">
+                            <button class="button-2">LEARN MORE</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="bg-2">
+            <div class="bg-2div1">
+                <img class="imagee" src="./NeoReach_ Influencer Marketing Agency for Global Brands/footer-base@2x.png"
+                    alt="">
+                <div class="bg-2div2">
+                    <img class="imagediv2"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/talkbubble-blank@2x.png" alt="">
+                </div>
+                <div class="bg-2div3">
+                    <img class="imagediv2"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/talkbubble-guy@2x.png" alt="">
+                </div>
+                <div class="bg-2div4">
+                    <img class="imagediv2"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/talkbubble-girl@2x.png" alt="">
+                </div>
+                <div class="bg-2div5">
+                    <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/horn-lines.svg"
+                        alt="">
+                </div>
+                <div class="bg-2div6">
+                    <img class="imagediv6"
+                        src="./NeoReach_ Influencer Marketing Agency for Global Brands/graph-wave@2x.png" alt="">
+                </div>
+                <div class="bg-2div7">
+                    <div class="bg-2div8">
+                        <img class="image"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/search-bar@2x.png" alt="">
+                    </div>
+                    <div class="bg-2div9">
+                        <img class="image"
+                            src="./NeoReach_ Influencer Marketing Agency for Global Brands/search-dots.svg" alt="">
+                    </div>
+                </div>
+                <div class="bg-2div10">
+                    <div class="bg-2dots">
+                        <div class="row1"></div>
+                    </div>
+                    <div class="bg-2dots">
+                        <div class="row2"></div>
+                        <div class="row2"></div>
+                    </div>
+                    <div class="bg-2dots">
+                        <div class="row3dot1"></div>
+                        <div class="row3dot2"></div>
+                        <div class="row3dot3"></div>
+                    </div>
+                    <div class="bg-2dots">
+                        <div class="row4dot1"></div>
+                        <div class="row4dot2"></div>
+                    </div>
+                </div>
+                <div class="dotsdiv">
+                    <div class="dotsdiv1">
+                        <div class="row-1"></div>
+                    </div>
+                    <div class="dotsdiv1">
+                        <div class="row-2dot1"></div>
+                        <div class="row-2dot2"></div>
+                    </div>
+                    <div class="dotsdiv1">
+                        <div class="row-3dot1"></div>
+                        <div class="row-3dot2"></div>
+                        <div class="row-3dot3"></div>
+                    </div>
+                    <div class="dotsdiv1">
+                        <div class="row-4dot1"></div>
+                        <div class="row-4dot2"></div>
+                    </div>
+                </div>
+                <div class="graph">
+                    <img class="image" src="./NeoReach_ Influencer Marketing Agency for Global Brands/graph-up.svg"
+                        alt="">
+                </div>
+                <div class="whitedot"></div>
+            </div>
+            <div class="bo-x">
+                <div class="bo-xdiv1">
+                    <h1>Start a campaign with us!</h1>
+                </div>
+                <div class="bo-xdiv2">
+                    <p>Submit the form below, tell us a bit more about
+                        your business, and we’ll be in touch shortly.
+                        Are you an Influencer? Sign up <b class="span">here</b> </p>
+                </div>
+            </div>
+            <div class="bo-xes1">
+                <input class="name" type="text" placeholder="*First Name">
+                <input class="name" type="text" placeholder="*Last Name">
+            </div>
+            <div class="bo-xes1">
+                <input class="name" type="text" placeholder="*Business Email">
+                <input class="name" type="text" placeholder="*Contact Phone Number">
+            </div>
+            <div class="bo-xes1">
+                <input class="name" type="text" placeholder="*Company Name">
+                <input class="name" type="text" placeholder="*Company Website">
+            </div>
+            <div class="bo-xes1">
+                <input class="name" type="text" placeholder="*Budget">
+                <input class="name" type="text" placeholder="*Company Size">
+            </div>
+            <div class="bo-x2">
+                <textarea class="describe" name=""
+                    id="">Describe what you,re looking to achieve-be as descriptive as possible.</textarea>
+            </div>
+            <div class="bo-x3">
+                <button class="button-3">LET,S CHAT!</button>
+            </div>
+        </section>
+        <section class="bg-3">
+            <div class="bg-3div1">
+                <div class="bg-3div2">
+                    <img src="./NeoReach_ Influencer Marketing Agency for Global Brands/logo.svg" alt="" class="logo-1">
+                </div>
+                <div class="bg-3div3">
+                    <p>Seamlessly search, manage, and track
+                        user-generated content campaigns.</p>
+                </div>
+                <div class="bg-3div4">
+                    <div class="bg-3div5">
+                        <i id="icon" class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="bg-3div5">
+                        <i id="icon" class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="bg-3div5">
+                        <i id="icon" class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="bg-3div5">
+                        <i id="icon" class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-3div6">
+                <ul class="bg-3div7">
+                    <li class="list-1">Advertisers</li>
+                    <li class="list-2">Pricing</li>
+                    <li class="list-2">Case Studies</li>
+                    <li class="list-2">Advertiser FAQ</li>
+                </ul>
+                <ul class="bg-3div7">
+                    <li class="list-1">Influencers</li>
+                    <li class="list-2">Community</li>
+                    <li class="list-2">Influencer FAQ</li>
+                    <li class="list-2">Influencer Guidelines</li>
+                    <li class="list-2">Influencer Sign Up</li>
+                </ul>
+                <ul class="bg-3div7">
+                    <li class="list-1">Solutions</li>
+                    <li class="list-2">Services</li>
+                    <li class="list-2">Software</li>
+                    <li class="list-2">API</li>
+                    <li class="list-2">Fraud Detectionold</li>
+                </ul>
+                <ul class="bg-3div7">
+                    <li class="list-1">Resources</li>
+                    <li class="list-2">Meet The Team</li>
+                    <li class="list-2">The Org</li>
+                    <li class="list-2">Press</li>
+                    <li class="list-2">Privacy</li>
+                    <li class="list-2">Customer Support</li>
+                </ul>
+                <ul class="bg-3div7">
+                    <li class="list-1">Contact</li>
+                    <li class="list-2">Email: team@neoreach.com</li>
+                    <li class="list-2">Careers</li>
+                    <li class="list-2">Call: 1-877-NEOREACH</li>
+                </ul>
+            </div>
+            <div class="bg-3div8">
+                <h1>© 2024. All Rights Reserved.</h1>
+                <h1>Design: Griflan</h1>
+            </div>
+
+        </section>
+    </header>
+
+</body>
+
+</html>
